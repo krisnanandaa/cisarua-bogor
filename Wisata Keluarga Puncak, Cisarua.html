@@ -1,112 +1,359 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Wisata Keluarga Puncak, Cisarua</title>
-<style>
-:root{--bg:#eef3ec;--card:#fff;--ink:#1d2b22;--mute:#58675d;--line:#d5dfd3;--acc:#2f6b4a;--acc2:#e9f1e6;--sky:#cfe6ef;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a15;--card:#1b261f;--ink:#e6efe8;--mute:#9db0a3;--line:#2c3b31;--acc:#7cc79d;--acc2:#233328;--sky:#24424d}}
-:root[data-theme="dark"]{--bg:#121a15;--card:#1b261f;--ink:#e6efe8;--mute:#9db0a3;--line:#2c3b31;--acc:#7cc79d;--acc2:#233328;--sky:#24424d}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif}
-.w{max-width:960px;margin:0 auto;padding:28px 18px 60px}
-h1{font-size:clamp(1.9rem,6vw,3rem);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
-h2{font-size:1.45rem;margin:40px 0 14px}
-p{margin:0 0 10px}.mute{color:var(--mute)}
-.start{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:18px 0}
-a{color:var(--acc);text-underline-offset:3px}
-.note{border-left:4px solid var(--acc);background:var(--acc2);padding:12px 14px;border-radius:0 10px 10px 0;font-size:.95rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.img{display:block;width:100%;border:0;padding:0;cursor:pointer;background:var(--sky)}
-.img svg{display:block;width:100%;height:auto}
-.img:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.b{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
-.b h3{margin:0;font-size:1.15rem}
-.tag{font-size:.85rem;color:var(--mute)}
-.row{font-size:.93rem}
-.row b{font-weight:700}
-.pill{display:inline-block;background:var(--acc2);color:var(--acc);border-radius:99px;padding:2px 10px;font-size:.82rem;font-weight:700}
-.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
-.btn{font:inherit;font-size:.9rem;border:1px solid var(--acc);color:var(--acc);background:transparent;border-radius:8px;padding:6px 12px;cursor:pointer;text-decoration:none}
-.btn.p{background:var(--acc);color:var(--bg)}
-table{width:100%;border-collapse:collapse;font-size:.95rem}
-.sc{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
-th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
-tr:last-child td{border:0}
-.tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--acc)}
-.tl li{padding:0 0 14px 16px}
-.tl b{display:block}
-dialog{border:0;border-radius:16px;padding:0;max-width:min(560px,94vw);width:100%;background:var(--card);color:var(--ink)}
-dialog::backdrop{background:rgba(0,0,0,.55)}
-.dc{padding:16px}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Wisata Keluarga Puncak, Cisarua</title>
+    <style>
+        :root {
+            --bg: #eef3ec;
+            --card: #fff;
+            --ink: #1d2b22;
+            --mute: #58675d;
+            --line: #d5dfd3;
+            --acc: #2f6b4a;
+            --acc2: #e9f1e6;
+            --sky: #cfe6ef;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px)
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #121a15;
+                --card: #1b261f;
+                --ink: #e6efe8;
+                --mute: #9db0a3;
+                --line: #2c3b31;
+                --acc: #7cc79d;
+                --acc2: #233328;
+                --sky: #24424d
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #121a15;
+            --card: #1b261f;
+            --ink: #e6efe8;
+            --mute: #9db0a3;
+            --line: #2c3b31;
+            --acc: #7cc79d;
+            --acc2: #233328;
+            --sky: #24424d
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font: 16px/1.6 Georgia, "Times New Roman", serif
+        }
+
+        .w {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 28px 18px 60px
+        }
+
+        h1 {
+            font-size: clamp(1.9rem, 6vw, 3rem);
+            line-height: 1.1;
+            margin: 0 0 10px;
+            letter-spacing: -.02em
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            margin: 40px 0 14px
+        }
+
+        p {
+            margin: 0 0 10px
+        }
+
+        .mute {
+            color: var(--mute)
+        }
+
+        .start {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px;
+            margin: 18px 0
+        }
+
+        a {
+            color: var(--acc);
+            text-underline-offset: 3px
+        }
+
+        .note {
+            border-left: 4px solid var(--acc);
+            background: var(--acc2);
+            padding: 12px 14px;
+            border-radius: 0 10px 10px 0;
+            font-size: .95rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 16px
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column
+        }
+
+        .img {
+            display: block;
+            width: 100%;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            background: var(--sky)
+        }
+
+        .img svg {
+            display: block;
+            width: 100%;
+            height: auto
+        }
+
+        .img:focus-visible,
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--acc);
+            outline-offset: 2px
+        }
+
+        .b {
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1
+        }
+
+        .b h3 {
+            margin: 0;
+            font-size: 1.15rem
+        }
+
+        .tag {
+            font-size: .85rem;
+            color: var(--mute)
+        }
+
+        .row {
+            font-size: .93rem
+        }
+
+        .row b {
+            font-weight: 700
+        }
+
+        .pill {
+            display: inline-block;
+            background: var(--acc2);
+            color: var(--acc);
+            border-radius: 99px;
+            padding: 2px 10px;
+            font-size: .82rem;
+            font-weight: 700
+        }
+
+        .btns {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: auto;
+            padding-top: 8px
+        }
+
+        .btn {
+            font: inherit;
+            font-size: .9rem;
+            border: 1px solid var(--acc);
+            color: var(--acc);
+            background: transparent;
+            border-radius: 8px;
+            padding: 6px 12px;
+            cursor: pointer;
+            text-decoration: none
+        }
+
+        .btn.p {
+            background: var(--acc);
+            color: var(--bg)
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .95rem
+        }
+
+        .sc {
+            overflow-x: auto;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--line)
+        }
+
+        tr:last-child td {
+            border: 0
+        }
+
+        .tl {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-left: 3px solid var(--acc)
+        }
+
+        .tl li {
+            padding: 0 0 14px 16px
+        }
+
+        .tl b {
+            display: block
+        }
+
+        dialog {
+            border: 0;
+            border-radius: 16px;
+            padding: 0;
+            max-width: min(560px, 94vw);
+            width: 100%;
+            background: var(--card);
+            color: var(--ink)
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, .55)
+        }
+
+        .dc {
+            padding: 16px
+        }
+    </style>
 </head>
+
 <body>
-<div class="w">
-<h1>Wisata Keluarga di Puncak, Cisarua</h1>
-<p class="mute">Destinasi yang dekat dari hotel, bisa dicapai dengan mobil pribadi, dan nyaman untuk orang tua. Klik gambar untuk detail, klik alamat untuk membuka Google Maps.</p>
+    <div class="w">
+        <h1>Wisata Keluarga di Puncak, Cisarua</h1>
+        <p class="mute">Destinasi yang dekat dari hotel, bisa dicapai dengan mobil pribadi, dan nyaman untuk orang tua.
+            Klik gambar untuk detail, klik alamat untuk membuka Google Maps.</p>
 
-<div class="start">
-<b>Titik awal: Hotel Amarsya Cisarua Puncak</b><br>
-<a id="hotel" target="_blank" rel="noopener">Jl. Dewi Sartika No. 10, Cipari, Cisarua, Kabupaten Bogor, Jawa Barat 16750</a>
-</div>
+        <div class="start">
+            <b>Titik awal: Hotel Amarsya Cisarua Puncak</b><br>
+            <a id="hotel" target="_blank" rel="noopener">Jl. Dewi Sartika No. 10, Cipari, Cisarua, Kabupaten Bogor, Jawa
+                Barat 16750</a>
+        </div>
 
-<p class="note">Estimasi waktu tempuh bersifat perkiraan dan bisa jauh lebih lama saat jalur Puncak macet, terutama akhir pekan dan hari libur. Harga tiket (HTM) hanya patokan anggaran. Tarif wahana, parkir, dan paket biasanya terpisah, jadi konfirmasi dulu sebelum berangkat.</p>
+        <p class="note">Estimasi waktu tempuh bersifat perkiraan dan bisa jauh lebih lama saat jalur Puncak macet,
+            terutama akhir pekan dan hari libur. Harga tiket (HTM) hanya patokan anggaran. Tarif wahana, parkir, dan
+            paket biasanya terpisah, jadi konfirmasi dulu sebelum berangkat.</p>
 
-<h2>Destinasi Rekomendasi</h2>
-<div class="sc"><table>
-<thead><tr><th>Prioritas</th><th>Destinasi</th><th>Alasan</th><th>Dari hotel</th></tr></thead>
-<tbody id="rank"></tbody></table></div>
+        <h2>Destinasi Rekomendasi</h2>
+        <div class="sc">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prioritas</th>
+                        <th>Destinasi</th>
+                        <th>Alasan</th>
+                        <th>Dari hotel</th>
+                    </tr>
+                </thead>
+                <tbody id="rank"></tbody>
+            </table>
+        </div>
 
-<h2>Semua destinasi</h2>
-<div class="grid" id="grid"></div>
-</div>
+        <h2>Semua destinasi</h2>
+        <div class="grid" id="grid"></div>
+    </div>
 
-<dialog id="dlg"><div class="dc" id="dc"></div></dialog>
+    <dialog id="dlg">
+        <div class="dc" id="dc"></div>
+    </dialog>
 
-<script>
-var HOTEL="Hotel Amarsya Cisarua Puncak, Jl. Dewi Sartika No. 10, Cipari, Cisarua, Bogor";
-var D=[
-{n:"Dairyland Riverside (Cimory)",t:"Cocok untuk orang tua",k:"sungai",p:1,a:"Jl. Raya Puncak–Gadog KM 77 No. 435, Leuwimalang, Cisarua",h:"Sekitar Rp20.000/orang",w:"10–15 menit",ak:"Pemandangan sungai, makan bersama, belanja oleh-oleh",c:"Forest Walk Rp25.000, Monster Aquarium Rp20.000, Hutan Menyala Rp25.000",r:"Bisa makan, duduk santai, dan menikmati pemandangan"},
-{n:"Agrowisata Gunung Mas",t:"Cocok untuk bersantai",k:"teh",p:2,a:"Jl. Raya Puncak Gadog KM 87, Tugu Selatan, Cisarua",h:"Weekday Rp15.000, weekend Rp20.000 per orang; parkir mobil sekitar Rp10.000",w:"20–30 menit",ak:"Kebun teh, foto keluarga, tea walk",c:"ATV dan wahana lain berbayar terpisah",r:"Kebun teh dan udara sejuk, minim jalan kaki"},
-{n:"Taman Safari Indonesia Bogor",t:"Paling menarik untuk keluarga",k:"safari",p:3,a:"Jl. Kapten Harun Kabir No. 724, Cibeureum, Cisarua",h:"Weekday: dewasa Rp195.000, anak Rp150.000. Weekend: dewasa Rp210.000, anak Rp175.000 (reguler domestik 2026)",w:"15–25 menit",ak:"Safari dari mobil, pertunjukan satwa, wahana",c:"Harga belum tentu mencakup aktivitas tambahan. Sisihkan waktu setengah hari.",r:"Melihat satwa dari dalam mobil"},
-{n:"The Ranch Cisarua",t:"Wisata foto dan keluarga",k:"ranch",p:4,a:"Jl. Raya Puncak KM 77, Kopo, Cisarua",h:"Sekitar Rp25.000/orang",w:"10–15 menit",ak:"Berkuda, foto ala Eropa, taman, wahana keluarga",c:"Berkuda dan wahana tertentu berbayar tambahan",r:"Foto ala Eropa dan aktivitas keluarga"},
-{n:"Riung Gunung",t:"Santai, minim aktivitas fisik",k:"teh",p:5,a:"Jl. Raya Puncak, Tugu Selatan, Cisarua",h:"Belum terverifikasi, tanyakan ke pengelola",w:"20–30 menit",ak:"Panorama kebun teh, foto keluarga, bersantai",c:"Cocok untuk singgah singkat",r:"Panorama tanpa banyak aktivitas fisik"},
-{n:"Enchanting Valley",t:"Berbeda dari Dairyland Riverside",k:"taman",a:"Jl. Raya Puncak KM 77, Leuwimalang, Cisarua",h:"Weekday: dewasa Rp135.000, anak Rp75.000. Weekend: dewasa Rp160.000, anak Rp110.000",w:"10–15 menit",ak:"Taman tematik, pertunjukan, kebun, edukasi satwa"},
-{n:"MiniMania Puncak",t:"Miniatur dunia",k:"mini",a:"Jl. Raya Cibogo No. 72, Cipayung Datar, Megamendung",h:"Belum terverifikasi, konfirmasi ke pengelola",w:"20–30 menit",ak:"Miniatur landmark dunia, foto, wahana keluarga"},
-{n:"Curug Cilember",t:"Kurang disarankan jika orang tua tidak kuat berjalan jauh",k:"curug",a:"Desa Cilember, Cisarua, Kabupaten Bogor",h:"Anggarkan sekitar Rp25.000–Rp35.000/orang; konfirmasi di loket",w:"10–20 menit",ak:"Air terjun, hutan pinus",c:"Ada jalur jalan kaki dan tanjakan"}
-];
-function maps(q){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)}
-function route(q){return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(HOTEL)+"&destination="+encodeURIComponent(q)}
-function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-var S={
-sungai:'<path d="M0 90 Q100 60 200 85 T400 80 V170 H0Z" fill="#6fb3d2"/><path d="M0 120 Q100 100 200 118 T400 112" stroke="#fff" stroke-width="3" fill="none" opacity=".6"/><rect x="250" y="40" width="80" height="50" fill="#d9a066"/><path d="M240 42 L290 12 L340 42Z" fill="#a8553a"/><circle cx="60" cy="50" r="22" fill="#4f9a63"/><rect x="57" y="68" width="6" height="22" fill="#6b4a2f"/>',
-teh:'<circle cx="320" cy="40" r="20" fill="#f6d365"/><path d="M0 110 Q100 50 200 100 T400 90 V170 H0Z" fill="#5aa36a"/><path d="M0 140 Q100 100 200 135 T400 125 V170 H0Z" fill="#3f8a55"/><path d="M20 150 Q120 118 240 150" stroke="#2f6b4a" stroke-width="3" fill="none"/><path d="M60 165 Q160 135 300 165" stroke="#2f6b4a" stroke-width="3" fill="none"/>',
-safari:'<rect y="110" width="400" height="60" fill="#c9b27a"/><rect x="60" y="60" width="14" height="60" fill="#8a6a3b"/><circle cx="67" cy="52" r="22" fill="#5aa36a"/><path d="M210 120 h70 v-30 h-20 l-10-20 h-40z" fill="#e2735a"/><circle cx="225" cy="122" r="9" fill="#333"/><circle cx="265" cy="122" r="9" fill="#333"/><rect x="320" y="70" width="22" height="50" rx="8" fill="#e0a43c"/><rect x="326" y="40" width="10" height="36" fill="#e0a43c"/><circle cx="331" cy="38" r="9" fill="#e0a43c"/>',
-ranch:'<rect y="115" width="400" height="55" fill="#7fbf7a"/><rect x="40" y="60" width="90" height="60" fill="#e8d9b8"/><path d="M30 62 L85 25 L140 62Z" fill="#b9553a"/><path d="M180 130 h200 M180 150 h200" stroke="#8a6a3b" stroke-width="4"/><path d="M190 115 v45 M240 115 v45 M290 115 v45 M340 115 v45" stroke="#8a6a3b" stroke-width="4"/>',
-taman:'<rect y="110" width="400" height="60" fill="#8bc58a"/><circle cx="70" cy="95" r="14" fill="#e86f8f"/><circle cx="120" cy="105" r="14" fill="#f2b84b"/><circle cx="170" cy="92" r="14" fill="#b57edc"/><circle cx="260" cy="100" r="30" fill="#4f9a63"/><circle cx="320" cy="85" r="36" fill="#3f8a55"/><circle cx="60" cy="40" r="18" fill="#f6d365"/>',
-mini:'<rect y="120" width="400" height="50" fill="#9bc98a"/><path d="M80 120 L100 40 L120 120Z" fill="#c8c8d0"/><rect x="150" y="70" width="70" height="50" fill="#e2c28f"/><path d="M145 72 L185 40 L225 72Z" fill="#b9553a"/><rect x="250" y="55" width="26" height="65" fill="#a8b9c9"/><rect x="290" y="80" width="50" height="40" fill="#d9a066"/>',
-curug:'<path d="M0 60 L140 20 L260 70 L400 30 V170 H0Z" fill="#6c8f6b"/><rect x="170" y="45" width="36" height="115" rx="8" fill="#e8f6fb"/><path d="M165 150 Q190 170 215 150" fill="#6fb3d2"/><path d="M30 170 V110 L50 70 L70 110 V170Z" fill="#2f6b4a"/><path d="M330 170 V100 L355 55 L380 100 V170Z" fill="#2f6b4a"/>'};
-function art(k){return '<svg viewBox="0 0 400 170" role="img" aria-hidden="true"><rect width="400" height="170" fill="#cfe6ef"/>'+S[k]+'</svg>'}
-var g=document.getElementById("grid");
-D.forEach(function(d,i){
- var c=document.createElement("div");c.className="card";
- c.innerHTML='<button class="img" data-i="'+i+'" aria-label="Lihat detail '+esc(d.n)+'">'+art(d.k)+'</button><div class="b"><h3>'+esc(d.n)+'</h3><span class="tag">'+esc(d.t)+'</span><div class="row"><span class="pill">'+esc(d.w)+' dari hotel</span></div><div class="row"><b>Alamat:</b> <a target="_blank" rel="noopener" href="'+maps(d.n+" "+d.a)+'">'+esc(d.a)+'</a></div><div class="row"><b>HTM:</b> '+esc(d.h)+'</div><div class="btns"><button class="btn p" data-i="'+i+'">Detail</button><a class="btn" target="_blank" rel="noopener" href="'+route(d.n+" "+d.a)+'">Rute dari hotel</a></div></div>';
- g.appendChild(c)});
-var rk=document.getElementById("rank");
-D.filter(function(d){return d.p}).sort(function(a,b){return a.p-b.p}).forEach(function(d){
- var tr=document.createElement("tr");
- tr.innerHTML='<td>'+d.p+'</td><td><a target="_blank" rel="noopener" href="'+maps(d.n+" "+d.a)+'">'+esc(d.n)+'</a></td><td>'+esc(d.r)+'</td><td>'+esc(d.w)+'</td>';rk.appendChild(tr)});
-document.getElementById("hotel").href=maps(HOTEL);
-var dlg=document.getElementById("dlg"),dc=document.getElementById("dc");
-document.addEventListener("click",function(e){
- var t=e.target.closest("[data-i]");
- if(t){var d=D[t.dataset.i];
-  dc.innerHTML=art(d.k)+'<h3 style="margin:12px 0 2px">'+esc(d.n)+'</h3><p class="tag">'+esc(d.t)+'</p><p><b>Alamat:</b> <a target="_blank" rel="noopener" href="'+maps(d.n+" "+d.a)+'">'+esc(d.a)+'</a></p><p><b>Dari hotel:</b> '+esc(d.w)+'</p><p><b>HTM:</b> '+esc(d.h)+'</p><p><b>Aktivitas:</b> '+esc(d.ak)+'</p>'+(d.c?'<p><b>Catatan:</b> '+esc(d.c)+'</p>':'')+'<div class="btns"><a class="btn p" target="_blank" rel="noopener" href="'+maps(d.n+" "+d.a)+'">Buka di Google Maps</a><a class="btn" target="_blank" rel="noopener" href="'+route(d.n+" "+d.a)+'">Rute dari hotel</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(d.n+" Puncak")+'">Lihat foto asli</a><button class="btn" id="cl">Tutup</button></div>';
-  dlg.showModal();return}
- if(e.target.id==="cl"||e.target===dlg)dlg.close()});
-</script>
+    <script>
+        var HOTEL = "Hotel Amarsya Cisarua Puncak, Jl. Dewi Sartika No. 10, Cipari, Cisarua, Bogor";
+        var D = [
+            { n: "Dairyland Riverside (Cimory)", t: "Cocok untuk orang tua", k: "sungai", p: 1, a: "Jl. Raya Puncak–Gadog KM 77 No. 435, Leuwimalang, Cisarua", h: "Sekitar Rp20.000/orang", w: "10–15 menit", ak: "Pemandangan sungai, makan bersama, belanja oleh-oleh", c: "Forest Walk Rp25.000, Monster Aquarium Rp20.000, Hutan Menyala Rp25.000", r: "Bisa makan, duduk santai, dan menikmati pemandangan" },
+            { n: "Agrowisata Gunung Mas", t: "Cocok untuk bersantai", k: "teh", p: 2, a: "Jl. Raya Puncak Gadog KM 87, Tugu Selatan, Cisarua", h: "Weekday Rp15.000, weekend Rp20.000 per orang; parkir mobil sekitar Rp10.000", w: "20–30 menit", ak: "Kebun teh, foto keluarga, tea walk", c: "ATV dan wahana lain berbayar terpisah", r: "Kebun teh dan udara sejuk, minim jalan kaki" },
+            { n: "Taman Safari Indonesia Bogor", t: "Paling menarik untuk keluarga", k: "safari", p: 3, a: "Jl. Kapten Harun Kabir No. 724, Cibeureum, Cisarua", h: "Weekday: dewasa Rp195.000, anak Rp150.000. Weekend: dewasa Rp210.000, anak Rp175.000 (reguler domestik 2026)", w: "15–25 menit", ak: "Safari dari mobil, pertunjukan satwa, wahana", c: "Harga belum tentu mencakup aktivitas tambahan. Sisihkan waktu setengah hari.", r: "Melihat satwa dari dalam mobil" },
+            { n: "The Ranch Cisarua", t: "Wisata foto dan keluarga", k: "ranch", p: 4, a: "Jl. Raya Puncak KM 77, Kopo, Cisarua", h: "Sekitar Rp25.000/orang", w: "10–15 menit", ak: "Berkuda, foto ala Eropa, taman, wahana keluarga", c: "Berkuda dan wahana tertentu berbayar tambahan", r: "Foto ala Eropa dan aktivitas keluarga" },
+            { n: "Riung Gunung", t: "Santai, minim aktivitas fisik", k: "teh", p: 5, a: "Jl. Raya Puncak, Tugu Selatan, Cisarua", h: "-", w: "20–30 menit", ak: "Panorama kebun teh, foto keluarga, bersantai", c: "Cocok untuk singgah singkat", r: "Panorama tanpa banyak aktivitas fisik" },
+            { n: "Enchanting Valley", t: "Berbeda dari Dairyland Riverside", k: "taman", a: "Jl. Raya Puncak KM 77, Leuwimalang, Cisarua", h: "Weekday: dewasa Rp135.000, anak Rp75.000. Weekend: dewasa Rp160.000, anak Rp110.000", w: "10–15 menit", ak: "Taman tematik, pertunjukan, kebun, edukasi satwa" },
+            { n: "MiniMania Puncak", t: "Miniatur dunia", k: "mini", a: "Jl. Raya Cibogo No. 72, Cipayung Datar, Megamendung", h: "-", w: "20–30 menit", ak: "Miniatur landmark dunia, foto, wahana keluarga" },
+            { n: "Curug Cilember", t: "Kurang disarankan jika orang tua tidak kuat berjalan jauh", k: "curug", a: "Desa Cilember, Cisarua, Kabupaten Bogor", h: "Anggarkan sekitar Rp25.000–Rp35.000/orang; konfirmasi di loket", w: "10–20 menit", ak: "Air terjun, hutan pinus", c: "Ada jalur jalan kaki dan tanjakan" },
+            { n: "Cimory on the Mountain", t: "Santai, kuliner, dan pemandangan", k: "teh", a: "Jl. Raya Puncak KM 83, Tugu Selatan, Cisarua", h: "-", w: "20–30 menit", ak: "Restoran dengan view gunung, area bermain, belanja produk Cimory", c: "Cocok untuk makan siang sambil menikmati udara sejuk" },
+            { n: "Telaga Warna", t: "Danau dan hutan, jalur datar", k: "danau", a: "Jl. Raya Puncak, Tugu Utara, Cisarua", h: "-", w: "15–25 menit", ak: "Danau di tengah hutan, jalan santai, foto", c: "Jalur sekitar danau relatif datar, tetapi bisa licin saat hujan" },
+            { n: "Rindu Alam", t: "Makan sambil menikmati pemandangan", k: "teh", a: "Jl. Raya Puncak, Tugu Selatan, Cisarua", h: "-", w: "20–30 menit", ak: "Restoran bernuansa alam, taman, area bermain anak", c: "Cocok untuk istirahat dan makan, minim berjalan kaki" },
+            { n: "Taman Wisata Matahari", t: "Wahana keluarga dan taman", k: "taman", a: "Jl. Raya Puncak, Cisarua, Kabupaten Bogor", h: "-", w: "10–20 menit", ak: "Taman, wahana anak, kolam, spot foto", c: "Cek jam buka dan wahana yang aktif sebelum berangkat" },
+            { n: "Kebun Raya Cibodas", t: "Taman botani luas dan sejuk", k: "taman", a: "Jl. Kebun Raya Cibodas, Sindanglaya, Cipanas, Cianjur", h: "-", w: "45–70 menit", ak: "Kebun raya, koleksi tanaman, jalan santai, piknik", c: "Lebih jauh dan masuk wilayah Cianjur; area luas, pertimbangkan stamina orang tua" },
+            { n: "Taman Bunga Nusantara", t: "Taman bunga luas, banyak spot foto", k: "taman", a: "Jl. Mariwati KM 7, Sukanagalih, Pacet, Cianjur", h: "-", w: "45–70 menit", ak: "Taman bunga bertema, foto, area bermain anak", c: "Area luas; biasanya ada kendaraan keliling berbayar, tanyakan di lokasi" },
+            { n: "Little Venice Kota Bunga", t: "Suasana ala Eropa untuk foto", k: "sungai", a: "Kota Bunga, Jl. Raya Puncak, Cipanas, Cianjur", h: "-", w: "30–45 menit", ak: "Kawasan bergaya Venesia, kafe, foto, bersantai", c: "Sebaiknya cek ulang jam buka dan kondisi lokasi" },
+            { n: "Kebun Raya Bogor", t: "Jalur lebar dan teduh", k: "taman", a: "Jl. Ir. H. Juanda No. 13, Paledang, Kota Bogor", h: "-", w: "50–90 menit", ak: "Kebun raya, Taman Teysmann, jalan santai, piknik", c: "Ke arah Bogor kota; perjalanan bisa lebih lama saat macet" }
+        ];
+        function maps(q) { return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q) }
+        function route(q) { return "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(HOTEL) + "&destination=" + encodeURIComponent(q) }
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c] }) }
+        var S = {
+            sungai: '<path d="M0 90 Q100 60 200 85 T400 80 V170 H0Z" fill="#6fb3d2"/><path d="M0 120 Q100 100 200 118 T400 112" stroke="#fff" stroke-width="3" fill="none" opacity=".6"/><rect x="250" y="40" width="80" height="50" fill="#d9a066"/><path d="M240 42 L290 12 L340 42Z" fill="#a8553a"/><circle cx="60" cy="50" r="22" fill="#4f9a63"/><rect x="57" y="68" width="6" height="22" fill="#6b4a2f"/>',
+            teh: '<circle cx="320" cy="40" r="20" fill="#f6d365"/><path d="M0 110 Q100 50 200 100 T400 90 V170 H0Z" fill="#5aa36a"/><path d="M0 140 Q100 100 200 135 T400 125 V170 H0Z" fill="#3f8a55"/><path d="M20 150 Q120 118 240 150" stroke="#2f6b4a" stroke-width="3" fill="none"/><path d="M60 165 Q160 135 300 165" stroke="#2f6b4a" stroke-width="3" fill="none"/>',
+            safari: '<rect y="110" width="400" height="60" fill="#c9b27a"/><rect x="60" y="60" width="14" height="60" fill="#8a6a3b"/><circle cx="67" cy="52" r="22" fill="#5aa36a"/><path d="M210 120 h70 v-30 h-20 l-10-20 h-40z" fill="#e2735a"/><circle cx="225" cy="122" r="9" fill="#333"/><circle cx="265" cy="122" r="9" fill="#333"/><rect x="320" y="70" width="22" height="50" rx="8" fill="#e0a43c"/><rect x="326" y="40" width="10" height="36" fill="#e0a43c"/><circle cx="331" cy="38" r="9" fill="#e0a43c"/>',
+            ranch: '<rect y="115" width="400" height="55" fill="#7fbf7a"/><rect x="40" y="60" width="90" height="60" fill="#e8d9b8"/><path d="M30 62 L85 25 L140 62Z" fill="#b9553a"/><path d="M180 130 h200 M180 150 h200" stroke="#8a6a3b" stroke-width="4"/><path d="M190 115 v45 M240 115 v45 M290 115 v45 M340 115 v45" stroke="#8a6a3b" stroke-width="4"/>',
+            taman: '<rect y="110" width="400" height="60" fill="#8bc58a"/><circle cx="70" cy="95" r="14" fill="#e86f8f"/><circle cx="120" cy="105" r="14" fill="#f2b84b"/><circle cx="170" cy="92" r="14" fill="#b57edc"/><circle cx="260" cy="100" r="30" fill="#4f9a63"/><circle cx="320" cy="85" r="36" fill="#3f8a55"/><circle cx="60" cy="40" r="18" fill="#f6d365"/>',
+            mini: '<rect y="120" width="400" height="50" fill="#9bc98a"/><path d="M80 120 L100 40 L120 120Z" fill="#c8c8d0"/><rect x="150" y="70" width="70" height="50" fill="#e2c28f"/><path d="M145 72 L185 40 L225 72Z" fill="#b9553a"/><rect x="250" y="55" width="26" height="65" fill="#a8b9c9"/><rect x="290" y="80" width="50" height="40" fill="#d9a066"/>',
+            danau: '<path d="M0 80 L120 40 L240 75 L400 35 V170 H0Z" fill="#6c8f6b"/><ellipse cx="200" cy="130" rx="150" ry="28" fill="#6fb3d2"/><ellipse cx="200" cy="128" rx="90" ry="12" fill="#e8c36a" opacity=".6"/><circle cx="340" cy="40" r="18" fill="#f6d365"/>', curug: '<path d="M0 60 L140 20 L260 70 L400 30 V170 H0Z" fill="#6c8f6b"/><rect x="170" y="45" width="36" height="115" rx="8" fill="#e8f6fb"/><path d="M165 150 Q190 170 215 150" fill="#6fb3d2"/><path d="M30 170 V110 L50 70 L70 110 V170Z" fill="#2f6b4a"/><path d="M330 170 V100 L355 55 L380 100 V170Z" fill="#2f6b4a"/>'
+        };
+        function art(k) { return '<svg viewBox="0 0 400 170" role="img" aria-hidden="true"><rect width="400" height="170" fill="#cfe6ef"/>' + S[k] + '</svg>' }
+        var g = document.getElementById("grid");
+        D.forEach(function (d, i) {
+            var c = document.createElement("div"); c.className = "card";
+            c.innerHTML = '<button class="img" data-i="' + i + '" aria-label="Lihat detail ' + esc(d.n) + '">' + art(d.k) + '</button><div class="b"><h3>' + esc(d.n) + '</h3><span class="tag">' + esc(d.t) + '</span><div class="row"><span class="pill">' + esc(d.w) + ' dari hotel</span></div><div class="row"><b>Alamat:</b> <a target="_blank" rel="noopener" href="' + maps(d.n + " " + d.a) + '">' + esc(d.a) + '</a></div><div class="row"><b>HTM:</b> ' + esc(d.h) + '</div><div class="btns"><button class="btn p" data-i="' + i + '">Detail</button><a class="btn" target="_blank" rel="noopener" href="' + route(d.n + " " + d.a) + '">Rute dari hotel</a></div></div>';
+            g.appendChild(c)
+        });
+        var rk = document.getElementById("rank");
+        D.filter(function (d) { return d.p }).sort(function (a, b) { return a.p - b.p }).forEach(function (d) {
+            var tr = document.createElement("tr");
+            tr.innerHTML = '<td>' + d.p + '</td><td><a target="_blank" rel="noopener" href="' + maps(d.n + " " + d.a) + '">' + esc(d.n) + '</a></td><td>' + esc(d.r) + '</td><td>' + esc(d.w) + '</td>'; rk.appendChild(tr)
+        });
+        document.getElementById("hotel").href = maps(HOTEL);
+        var dlg = document.getElementById("dlg"), dc = document.getElementById("dc");
+        document.addEventListener("click", function (e) {
+            var t = e.target.closest("[data-i]");
+            if (t) {
+                var d = D[t.dataset.i];
+                dc.innerHTML = art(d.k) + '<h3 style="margin:12px 0 2px">' + esc(d.n) + '</h3><p class="tag">' + esc(d.t) + '</p><p><b>Alamat:</b> <a target="_blank" rel="noopener" href="' + maps(d.n + " " + d.a) + '">' + esc(d.a) + '</a></p><p><b>Dari hotel:</b> ' + esc(d.w) + '</p><p><b>HTM:</b> ' + esc(d.h) + '</p><p><b>Aktivitas:</b> ' + esc(d.ak) + '</p>' + (d.c ? '<p><b>Catatan:</b> ' + esc(d.c) + '</p>' : '') + '<div class="btns"><a class="btn p" target="_blank" rel="noopener" href="' + maps(d.n + " " + d.a) + '">Buka di Google Maps</a><a class="btn" target="_blank" rel="noopener" href="' + route(d.n + " " + d.a) + '">Rute dari hotel</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(d.n + " Puncak") + '">Lihat foto asli</a><button class="btn" id="cl">Tutup</button></div>';
+                dlg.showModal(); return
+            }
+            if (e.target.id === "cl" || e.target === dlg) dlg.close()
+        });
+    </script>
 </body>
+
 </html>
